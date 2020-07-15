@@ -9,6 +9,7 @@
   <strong>Email:</strong>
   <%= @author.email %>
 </p>
-
-<%= link_to 'Edit', edit_author_path(@author) %> |
+<% if logged_in? %>
+  <%= link_to 'Edit', edit_author_path(@author) %> |
+<% end %>
 <%= link_to 'Back', authors_path %>
